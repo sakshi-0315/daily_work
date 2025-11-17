@@ -1,0 +1,43 @@
+LoginPage.jsx
+
+  import React from "react";
+import './Loginpage.css';
+import { useNavigate, Link } from 'react-router-dom';
+import SignUpForm from "./SignUpForm";
+
+const LoginForm = () => {
+    const navigate = useNavigate();
+
+    const handlesubmit = (e) => {
+        e.preventDefault();
+
+        navigate("/Home");
+    }
+    return (
+        <div className="d1">
+            <form onSubmit={handlesubmit}>
+             <table align="center">
+                <h1>Login Form</h1>
+             
+                <div className="input">
+                    Username: 
+                    <input type="text" placeholder="Enter username" required />
+                </div>
+
+                <div className="psw">
+                    Password: 
+                    <input type="password" placeholder="Enter password" required />
+                </div>
+
+                <input type="submit" />
+
+             <p className="signup-text">
+                Don’t have an account? <Link to="/SignUpForm">Sign Up</Link>
+             </p>
+                </table> 
+            </form>
+        </div>
+    );
+};
+
+export default LoginForm;
