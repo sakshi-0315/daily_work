@@ -41,3 +41,39 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+
+
+SignUpPage.jsx
+
+import React from "react";
+import './SignUpForm.css';
+import { useNavigate, Link } from 'react-router-dom';
+const SignUpForm = () => {
+    return (
+        <div>
+            <div className="d2">
+                <form action=""> 
+                <table align="center">
+                <h1>Sign Up Page</h1>  
+                <div className="input-name">
+                    Name: <input type="text" placeholder="Enter Name" required/>
+                </div> 
+                <div class="input-email">
+                   Email: <input type="Email" placeholder="Enter Email" required/>
+                </div> 
+                <div className="input-psw">
+                    Password: <input type="password" placeholder="Enter Password" required/>
+                </div>
+               <input type="submit"/>
+               <p>
+                Back to Login Page <Link to="/LoginForm">Login Page</Link>
+               </p>
+               </table>
+                </form>
+            </div>
+        </div>
+    )
+}
+
+export default SignUpForm;
